@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "dev": "node api/data.js"
+        "vercel-build": "npm run build",
+    "build": "your-actual-build-command"
   },
   "dependencies": {
     "express": "^4.18.2"
@@ -11,4 +12,5 @@
   "engines": {
     "node": "22.x"
   }
+  
 }
