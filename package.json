@@ -1,7 +1,6 @@
 {
   "name": "car-maintenance-backend",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "start": "node server.js",
     "dev": "json-server --watch db.json --port 3001"
