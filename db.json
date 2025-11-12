@@ -1,0 +1,292 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "password",
+      "name": "Admin User"
+    },
+    {
+      "id": "2",
+      "name": "tj",
+      "email": "tj@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "467798",
+      "name": "YK",
+      "email": "yk@sw",
+      "password": "123arif/"
+    },
+    {
+      "id": "367411",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "records": [
+    {
+      "id": "b680",
+      "driverName": "Tj",
+      "carPlate": "54212",
+      "carModel": "Lexus",
+      "partsCount": 2,
+      "totalCost": 90,
+      "date": "2025-11-01",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Battery",
+          "replaced": "No",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "2025-11-01",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 50
+        },
+        {
+          "partType": "Air Filter",
+          "replaced": "No",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 40
+        }
+      ]
+    },
+    {
+      "id": "2ca4",
+      "driverName": "Tj",
+      "carPlate": "42233",
+      "carModel": "Toyota",
+      "partsCount": 1,
+      "totalCost": 70,
+      "date": "2025-11-03",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Air Filter",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 70
+        }
+      ]
+    },
+    {
+      "id": "bda3",
+      "driverName": "Tj",
+      "carPlate": "53221",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 50,
+      "date": "2025-11-04",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Brake Pads",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "Test",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 50
+        }
+      ]
+    },
+    {
+      "id": "b8a0",
+      "driverName": "Tj",
+      "carPlate": "78965",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 40,
+      "date": "2025-11-04",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Brake Pads",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 40
+        }
+      ]
+    },
+    {
+      "id": "c806",
+      "driverName": "Tj",
+      "carPlate": "5454",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 43112,
+      "date": "2025-11-04",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Spark Plugs",
+          "replaced": "No",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 43112
+        }
+      ]
+    },
+    {
+      "id": "9629",
+      "driverName": "Tj",
+      "carPlate": "5455",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 200,
+      "date": "2025-11-05",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Tire",
+          "replaced": "No",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 200
+        }
+      ]
+    },
+    {
+      "id": "3776",
+      "driverName": "Tj",
+      "carPlate": "5455",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 0,
+      "date": "2025-11-05",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Brake Pads",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 0
+        }
+      ]
+    },
+    {
+      "id": "5438",
+      "driverName": "Tj",
+      "carPlate": "78965",
+      "carModel": "Lexus",
+      "partsCount": 1,
+      "totalCost": 0,
+      "date": "2025-11-05",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Air Filter",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 0
+        }
+      ]
+    },
+    {
+      "id": "eb5d",
+      "driverName": "Tj Brandon",
+      "carPlate": "866765",
+      "carModel": "Toyota",
+      "partsCount": 1,
+      "totalCost": 233,
+      "date": "2025-11-06",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Spark Plugs",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 233
+        }
+      ]
+    },
+    {
+      "id": "1182",
+      "driverName": "Tj",
+      "carPlate": "5667",
+      "carModel": "Toyota",
+      "partsCount": 1,
+      "totalCost": 0,
+      "date": "2025-11-06",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Battery",
+          "replaced": "No",
+          "brandName": "Test",
+          "supplier": "Test",
+          "manufactureDate": "2025-11-11",
+          "expiryDate": "2025-11-05",
+          "changeDate": "2025-11-06",
+          "cost": 0
+        }
+      ]
+    },
+    {
+      "id": "5265",
+      "driverName": "Tj",
+      "carPlate": "5667",
+      "carModel": "Lexus",
+      "partsCount": 2,
+      "totalCost": 0,
+      "date": "2025-11-07",
+      "status": "Completed",
+      "parts": [
+        {
+          "partType": "Air Filter",
+          "replaced": "No",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 0
+        },
+        {
+          "partType": "Tire",
+          "replaced": "Yes",
+          "brandName": "",
+          "supplier": "",
+          "manufactureDate": "2025-11-11",
+          "expiryDate": "",
+          "changeDate": "",
+          "cost": 0
+        }
+      ]
+    }
+  ]
+}
