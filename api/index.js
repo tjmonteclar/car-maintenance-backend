@@ -8,14 +8,17 @@ const app = express();
 app.use(express.json());
 
 // Load database
-const dbPath = path.join(__dirname, '../db.json');
+const dbPath = path.join(process.cwd(), 'db.json');
 let db = { users: [], records: [] };
 
 try {
-  const dbData = fs.readFileSync(dbPath, 'utf8');
-  db = JSON.parse(dbData);
+  if (fs.existsSync(dbPath)) {
+    const dbData = fs.readFileSync(dbPath, 'utf8');
+    db = JSON.parse(dbData);
+    console.log('Database loaded successfully');
+  }
 } catch (error) {
-  console.log('Using default database');
+  console.log('Using default database structure');
 }
 
 // Helper function to save database
@@ -25,7 +28,17 @@ const saveDB = () => {
 
 // Routes
 app.get('/', (req, res) => {
-  res.json({ message: 'Car Maintenance API is running!' });
+  res.json({ 
+    message: 'Car Maintenance API is running!',
+    endpoints: [
+      'GET /users',
+      'POST /users', 
+      'GET /records',
+      'POST /records',
+      'PUT /records/:id',
+      'DELETE /records/:id'
+    ]
+  });
 });
 
 // Users routes
@@ -35,11 +48,7 @@ app.get('/users', (req, res) => {
 
 app.get('/users/:id', (req, res) => {
   const user = db.users.find(u => u.id === req.params.id);
-  if (user) {
-    res.json(user);
-  } else {
-    res.status(404).json({ error: 'User not found' });
-  }
+  user ? res.json(user) : res.status(404).json({ error: 'User not found' });
 });
 
 app.post('/users', (req, res) => {
@@ -70,11 +79,7 @@ app.get('/records', (req, res) => {
 
 app.get('/records/:id', (req, res) => {
   const record = db.records.find(r => r.id === req.params.id);
-  if (record) {
-    res.json(record);
-  } else {
-    res.status(404).json({ error: 'Record not found' });
-  }
+  record ? res.json(record) : res.status(404).json({ error: 'Record not found' });
 });
 
 app.post('/records', (req, res) => {
@@ -109,7 +114,5 @@ app.delete('/records/:id', (req, res) => {
   }
 });
 
-// Export the serverless function
-module.exports = (req, res) => {
-  app(req, res);
-};
+// Export for Vercel
+module.exports = app;
