@@ -1,13 +1,23 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 
-// Middleware
+app.use(cors({
+  origin: [
+    'https://car-expense-maintenance.netlify.app',
+    'http://localhost:3000',
+    'http://localhost:5173'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
-// Load database
 const dbPath = path.join(process.cwd(), 'db.json');
 let db = { users: [], records: [] };
 
@@ -21,12 +31,10 @@ try {
   console.log('Using default database structure');
 }
 
-// Helper function to save database
 const saveDB = () => {
   fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 };
 
-// Routes
 app.get('/', (req, res) => {
   res.json({ 
     message: 'Car Maintenance API is running!',
@@ -41,7 +49,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// Users routes
 app.get('/users', (req, res) => {
   res.json(db.users);
 });
@@ -72,7 +79,6 @@ app.put('/users/:id', (req, res) => {
   }
 });
 
-// Records routes
 app.get('/records', (req, res) => {
   res.json(db.records);
 });
@@ -114,5 +120,4 @@ app.delete('/records/:id', (req, res) => {
   }
 });
 
-// Export for Vercel
 module.exports = app;
